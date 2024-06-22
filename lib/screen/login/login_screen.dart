@@ -5,18 +5,19 @@ import 'package:meditation/common_widget/round_button.dart';
 import 'package:meditation/common_widget/round_text_field.dart';
 import 'package:meditation/screen/home/choose_topic_screen.dart';
 import 'package:meditation/screen/home/welcome_screen.dart';
-import 'package:meditation_app/common/color_extension.dart';
-import 'package:meditation_app/common_widget/round_text_field.dart';
+import 'package:meditation/screen/login/sign_up_screen.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
-  bool isTrue = false;
+class _LoginScreenState extends State<LoginScreen> {
+
+  
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 25,
                       ),
                       Text(
-                        "Create your account",
+                        "Welcome Back!",
                         style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 28,
@@ -168,10 +169,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(
                 height: 35,
               ),
-              RoundTextField(hintText: "Username"),
-              const SizedBox(
-                height: 20,
-              ),
               RoundTextField(hintText: "Email address"),
               const SizedBox(
                 height: 20,
@@ -181,50 +178,53 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 obscureText: true,
               ),
               const SizedBox(
-                height: 8,
+                height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: [
-                    Text(
-                      "i have read the ",
-                      textAlign: TextAlign.center,
-                      style:
-                          TextStyle(color: TColor.secondaryText, fontSize: 14),
+              RoundButton(title: "LOG IN", onPressed: () {
+                context.push( const WelcomeScreen());
+                
+              }),
+              TextButton(
+                onPressed: () {
+                  
+                },
+                child: Text(
+                  "Forgot Password?",
+                  style: TextStyle(
+                    color: TColor.primaryText,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "CREATE A NEW ACCOUNT?",
+                    style: TextStyle(
+                      color: TColor.secondaryText,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
                     ),
-                    Text(
-                      "Privacy Policy",
-                      textAlign: TextAlign.center,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      context.push(const SignUpScreen());
+                    },
+                    child: Text(
+                      "SIGN UP",
                       style: TextStyle(
                         color: TColor.primary,
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    const Spacer(),
-                    IconButton(
-                      onPressed: () {
-                        setState(() {
-                          isTrue = !isTrue;
-                        });
-                      },
-                      icon: Icon(
-                        isTrue
-                            ? Icons.check_box
-                            : Icons.check_box_outline_blank_rounded,
-                        color: isTrue ? TColor.primary : TColor.secondaryText,
-                      ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
-              const SizedBox(
-                height: 8,
-              ),
-              RoundButton(title: "GET STARTED", onPressed: () {
-                 context.push(const WelcomeScreen());
-              }),
               const Spacer(),
             ],
           ),
