@@ -113,7 +113,7 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
                       ],
                     ),
                     Text(
-                      "para Voce?",
+                      "para o nosso App?",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 28,

@@ -53,7 +53,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
           ),
           const Spacer(),
           RoundButton(
-              title: "SIGNUP",
+              title: "Cadastro",
               onPressed: () {
                 context.push(const SignUpScreen());
               }),

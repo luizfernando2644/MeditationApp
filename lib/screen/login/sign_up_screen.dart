@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meditation_app/common/color_extension.dart';
@@ -13,8 +14,40 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   bool isTrue = false;
-  
+
+  Future<void> registerUsingEmailPassword({
+    required String email,
+    required String password,
+    required BuildContext context,
+  }) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    try {
+      UserCredential userCredential = await auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      User? user = userCredential.user;
+      if (user != null) {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+      }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('A senha fornecida é muito fraca.')));
+      } else if (e.code == 'email-already-in-use') {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text('O email já está sendo utilizado por outra conta.')));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text("Erro ao registrar: ${e.message}")));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +73,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           children: [
                             InkWell(
                               onTap: () {
-                                context.pop();
+                                Navigator.of(context).pop();
                               },
                               child: Image.asset(
                                 "/img/back.png",
@@ -65,88 +98,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       const SizedBox(
                         height: 25,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: MaterialButton(
-                          onPressed: () {},
-                          minWidth: double.maxFinite,
-                          elevation: 0,
-                          color: const Color(0xff8E97FD),
-                          height: 60,
-                          shape: RoundedRectangleBorder(
-                              side: BorderSide.none,
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Row(
-                            children: [
-                              const SizedBox(
-                                width: 15,
-                              ),
-                              Image.asset(
-                                '/img/fb.png',
-                                width: 25,
-                                height: 25,
-                              ),
-                              const Expanded(
-                                child: Text(
-                                  "Login Com o Facebook",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: MaterialButton(
-                          onPressed: () {},
-                          minWidth: double.maxFinite,
-                          elevation: 0,
-                          color: Colors.white,
-                          height: 60,
-                          shape: RoundedRectangleBorder(
-                              side:
-                                  BorderSide(color: TColor.tertiary, width: 1),
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Row(
-                            children: [
-                              const SizedBox(
-                                width: 15,
-                              ),
-                              Image.asset(
-                                '/img/google.png',
-                                width: 25,
-                                height: 25,
-                              ),
-                              Expanded(
-                                child: Text(
-                                  "Login com o Google",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: TColor.primaryText,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ],
@@ -154,49 +105,40 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(
                 height: 35,
               ),
-              Text(
-                "FAÇA LOGIN COM  O EMAIL",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: TColor.secondaryText,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700),
+              RoundTextField(
+                hintText: "Endereço de Email",
+                controller: _emailController,
               ),
-              const SizedBox(
-                height: 35,
-              ),
-              RoundTextField(hintText: "Username"),
-              const SizedBox(
-                height: 20,
-              ),
-              RoundTextField(hintText: "Endereço de Email"),
               const SizedBox(
                 height: 20,
               ),
               RoundTextField(
                 hintText: "Senha",
                 obscureText: true,
-              ),
-              const SizedBox(
-                height: 8,
+                controller: _passwordController,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   children: [
                     Text(
-                      "eu li o ",
-                      textAlign: TextAlign.center,
-                      style:
-                          TextStyle(color: TColor.secondaryText, fontSize: 14),
-                    ),
-                    Text(
-                      "Politica de privacidades",
-                      textAlign: TextAlign.center,
+                      "Eu li a ",
                       style: TextStyle(
-                        color: TColor.primary,
+                        color: TColor.secondaryText,
                         fontSize: 14,
-                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        // Aqui você pode adicionar uma ação para abrir a política de privacidade
+                      },
+                      child: Text(
+                        "Política de Privacidade",
+                        style: TextStyle(
+                          color: TColor.primary,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                     const Spacer(),
@@ -212,18 +154,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             : Icons.check_box_outline_blank_rounded,
                         color: isTrue ? TColor.primary : TColor.secondaryText,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
               const SizedBox(
-                height: 8,
+                height: 20,
               ),
               RoundButton(
-                  title: "INICIAR",
-                  onPressed: () {
-                    context.push(const WelcomeScreen());
-                  }),
+                title: "Cadastrar",
+                onPressed: () {
+                  if (_emailController.text.isNotEmpty &&
+                      _passwordController.text.isNotEmpty &&
+                      isTrue) {
+                    registerUsingEmailPassword(
+                      email: _emailController.text,
+                      password: _passwordController.text,
+                      context: context,
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(
+                            'Por favor, preencha todos os campos e aceite a política de privacidade.')));
+                  }
+                },
+              ),
               const Spacer(),
             ],
           ),
