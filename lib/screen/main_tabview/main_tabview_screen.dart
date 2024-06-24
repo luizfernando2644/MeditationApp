@@ -63,21 +63,21 @@ class _MainTabViewScreenState extends State<MainTabViewScreen>
                 }),
             TabButton(
                 icon: "/img/sleep_tab.png",
-                title: "Sleep",
+                title: "Dormir",
                 isSelect: selectTab == 1,
                 onPressed: () {
                   changeTab(1);
                 }),
             TabButton(
                 icon: "/img/meditate_tab.png",
-                title: "Meditate",
+                title: "Meditar",
                 isSelect: selectTab == 2,
                 onPressed: () {
                   changeTab(2);
                 }),
             TabButton(
                 icon: "/img/music_tab.png",
-                title: "Music",
+                title: "Música",
                 isSelect: selectTab == 3,
                 onPressed: () {
                   changeTab(3);

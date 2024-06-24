@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 25,
                       ),
                       Text(
-                        "Welcome Back!",
+                        "Bem vindo de volta!",
                         style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 28,
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               const Expanded(
                                 child: Text(
-                                  "CONTINUE WITH FACEBOOK",
+                                  "Login com o Facebook",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,
@@ -130,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               Expanded(
                                 child: Text(
-                                  "CONTINUE WITH GOOGLE",
+                                  "Login Com o Google",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: TColor.primaryText,
@@ -154,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 35,
               ),
               Text(
-                "OR LOG IN WITH EMAIL",
+                "FAÇA LOGIN COM EMAIL",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: TColor.secondaryText,
@@ -164,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 35,
               ),
-              RoundTextField(hintText: "Email address"),
+              RoundTextField(hintText: "Endereço de Email"),
               const SizedBox(
                 height: 20,
               ),
@@ -176,14 +176,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               RoundButton(
-                  title: "LOG IN",
+                  title: "Log-in",
                   onPressed: () {
                     context.push(const WelcomeScreen());
                   }),
               TextButton(
                 onPressed: () {},
                 child: Text(
-                  "Forgot Password?",
+                  "Recuperar senha?",
                   style: TextStyle(
                     color: TColor.primaryText,
                     fontSize: 14,
@@ -196,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "CREATE A NEW ACCOUNT?",
+                    "Criar uma nova conta?",
                     style: TextStyle(
                       color: TColor.secondaryText,
                       fontSize: 14,
@@ -208,7 +208,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       context.push(const SignUpScreen());
                     },
                     child: Text(
-                      "SIGN UP",
+                      "Cadastro",
                       style: TextStyle(
                         color: TColor.primary,
                         fontSize: 14,

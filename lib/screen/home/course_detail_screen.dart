@@ -84,7 +84,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Happy Morning",
+                      "Manhã feliz",
                       style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 34,
@@ -94,7 +94,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       height: 8,
                     ),
                     Text(
-                      "COURSE",
+                      "CURSO",
                       style: TextStyle(
                           color: TColor.secondaryText,
                           fontSize: 14,
@@ -104,7 +104,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       height: 15,
                     ),
                     Text(
-                      "Ease the mind into a restful night’s sleep  with these deep, amblent tones.",
+                      "Facilite a mente para uma noite de sono tranquila com estas musicas profundas e suaves.",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 16,
@@ -125,7 +125,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "24.234 Favorits",
+                            "24.234 Favoritos",
                             style: TextStyle(
                                 color: TColor.secondaryText,
                                 fontSize: 14,
@@ -142,7 +142,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "34.234 Lestening",
+                            "34.234 Audição",
                             style: TextStyle(
                                 color: TColor.secondaryText,
                                 fontSize: 14,
@@ -155,7 +155,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       height: 25,
                     ),
                     Text(
-                      "Pick a Narrator",
+                      "Escolha um narrador",
                       style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 20,
@@ -167,7 +167,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               Row(
                 children: [
                   SelectTabButton(
-                      title: "MALE VOICE",
+                      title: "VOZ MASCULINA",
                       isSelect: selectTab == 0,
                       onPressed: () {
                         setState(() {
@@ -175,7 +175,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         });
                       }),
                   SelectTabButton(
-                      title: "FEMALE VOICE",
+                      title: "VOZ FEMININA",
                       isSelect: selectTab == 1,
                       onPressed: () {
                         setState(() {
@@ -212,7 +212,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Focue Attention",
+                              "Concentre e atenção",
                               style: TextStyle(
                                 color: TColor.primaryText,
                                 fontSize: 16,

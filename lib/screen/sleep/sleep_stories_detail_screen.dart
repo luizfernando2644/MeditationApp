@@ -13,15 +13,15 @@ class SleepStoriesDetailScreen extends StatefulWidget {
 class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
   List listArr = [
     {
-      "image": "/img/mu3.png",
-      "title": "Moon Clouds",
-      "subtitle": "45 MIN . SLEEP MUSIC",
+      "image": "/img/mu4.png",
+      "title": "Nuvens lunares",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu2.png",
-      "title": "Sweet Sleep",
-      "subtitle": "45 MIN . SLEEP MUSIC",
-    }
+      "title": "Ilha da Noite",
+      "subtitle": "45 MIN . Musica para dormir"
+    },
   ];
 
   @override
@@ -100,7 +100,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                       height: 15,
                     ),
                     Text(
-                      "Night Island",
+                      "Ilha da Noite",
                       style: TextStyle(
                           color: TColor.sleepText,
                           fontSize: 34,
@@ -110,7 +110,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                       height: 8,
                     ),
                     Text(
-                      "45 MIN . SLEEP MUSIC",
+                      "45 MIN . Musica para dormir",
                       style: TextStyle(
                           color: TColor.secondaryText,
                           fontSize: 14,
@@ -120,7 +120,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                       height: 25,
                     ),
                     Text(
-                      "Ease the mind into a restful night’s sleep  with these deep, amblent tones.",
+                      "Facilite a mente para uma noite de sono tranquila com estas musicas profundas e suaves.",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 16,
@@ -142,7 +142,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "24.234 Favorits",
+                            "24.234 Favoritos",
                             style: TextStyle(
                                 color: TColor.sleepText,
                                 fontSize: 14,
@@ -160,7 +160,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "34.234 Lestening",
+                            "34.234 Audição",
                             style: TextStyle(
                                 color: TColor.sleepText,
                                 fontSize: 14,
@@ -180,7 +180,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                       height: 25,
                     ),
                     Text(
-                      "Related",
+                      "Relacionada",
                       style: TextStyle(
                           color: TColor.sleepText,
                           fontSize: 20,

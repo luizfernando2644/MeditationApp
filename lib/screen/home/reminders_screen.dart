@@ -42,7 +42,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 15,
                   ),
                   Text(
-                    "What time would you\nlike to meditate?",
+                    "A que horas você\nGosta de meditar?",
                     style: TextStyle(
                       color: TColor.primaryText,
                       fontSize: 24,
@@ -53,7 +53,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 15,
                   ),
                   Text(
-                    "Any time you can choose but We recommend\nfirst thing in th morning.",
+                    "A qualquer momento você pode escolher, mas recomendamos\nprimeira coisa da manhã.",
                     style: TextStyle(
                       color: TColor.secondaryText,
                       fontSize: 16,
@@ -78,7 +78,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 35,
                   ),
                   Text(
-                    "What day would you\nlike to meditate?",
+                    "Em que dia você\ngosta de meditar?",
                     style: TextStyle(
                       color: TColor.primaryText,
                       fontSize: 24,
@@ -89,7 +89,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 15,
                   ),
                   Text(
-                    "Everyday is best, but we recommend picking\nat least five.",
+                    "Todos os dias são melhores, mas recomendamos escolher\npelo menos cinco.",
                     style: TextStyle(
                       color: TColor.secondaryText,
                       fontSize: 16,
@@ -116,7 +116,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
               ),
             ),
             RoundButton(
-                title: "SAVE",
+                title: "Salvar",
                 onPressed: () {
                   context.push(const MainTabViewScreen());
                 }),
@@ -128,7 +128,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                       context.push(const MainTabViewScreen());
                     },
                     child: Text(
-                      "NO THANKS",
+                      "NÃO, OBRIGADO",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 14,

@@ -14,73 +14,73 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
   List dataArr = [
     {
       "image": "/img/c1.png",
-      "title": "Reduce Stress",
+      "title": "Reduzir o estresse",
       "color": "8E97FD",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c2.png",
-      "title": "Improve Performanee",
+      "title": "Melhorar o desempenho",
       "color": "FA6E5A",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c3.png",
-      "title": "Reduce Anxiety",
+      "title": "Reduza a ansiedade",
       "color": "FEB18F",
       "text_color": "3F414E",
     },
     {
       "image": "/img/c4.png",
-      "title": "Increase Happiness",
+      "title": "Aumentar a felicidade",
       "color": "FFCF86",
       "text_color": "3F414E",
     },
     {
       "image": "/img/c5.png",
-      "title": "Personal Growth",
+      "title": "Aumentar a felicidade",
       "color": "6CB28E",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c6.png",
-      "title": "Better Sleep",
+      "title": "Dormir melhor",
       "color": "3F414E",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c1.png",
-      "title": "Reduce Stress",
+      "title": "Reduzir o estresse",
       "color": "8E97FD",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c2.png",
-      "title": "Improve Performanee",
+      "title": "Melhorar o desempenho",
       "color": "FA6E5A",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c3.png",
-      "title": "Reduce Anxiety",
+      "title": "Reduza a ansiedade",
       "color": "FEB18F",
       "text_color": "3F414E",
     },
     {
       "image": "/img/c4.png",
-      "title": "Increase Happiness",
+      "title": "Aumentar a felicidade",
       "color": "FFCF86",
       "text_color": "3F414E",
     },
     {
       "image": "/img/c5.png",
-      "title": "Personal Growth",
+      "title": "Crescimento pessoal",
       "color": "6CB28E",
       "text_color": "FFECCC",
     },
     {
       "image": "/img/c6.png",
-      "title": "Better Sleep",
+      "title": "Dormir melhor",
       "color": "3F414E",
       "text_color": "FFECCC",
     }
@@ -102,7 +102,7 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            "What Brings you",
+                            "O que traz você",
                             style: TextStyle(
                               color: TColor.primaryText,
                               fontSize: 28,
@@ -113,7 +113,7 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
                       ],
                     ),
                     Text(
-                      "to Silent Moon?",
+                      "para Voce?",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 28,
@@ -123,7 +123,7 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
                       height: 15,
                     ),
                     Text(
-                      "choose a topic to focuse on:",
+                      "escolha um tema para focar:",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 20,

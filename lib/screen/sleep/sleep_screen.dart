@@ -12,53 +12,53 @@ class SleepScreen extends StatefulWidget {
 class _SleepScreenState extends State<SleepScreen> {
   int selectIndex = 0;
   List catArr = [
-    {"icon": "/img/all.png", "title": "All"},
-    {"icon": "/img/fav_m.png", "title": "My"},
-    {"icon": "/img/anxious.png", "title": "Anxious"},
-    {"icon": "/img/sleep_btn.png", "title": "Sleep"},
-    {"icon": "/img/kids.png", "title": "Kids"},
+    {"icon": "/img/all.png", "title": "Todos"},
+    {"icon": "/img/fav_m.png", "title": "Meu"},
+    {"icon": "/img/anxious.png", "title": "Ansiosa(o)"},
+    {"icon": "/img/sleep_btn.png", "title": "Dormir"},
+    {"icon": "/img/kids.png", "title": "Criança"},
   ];
 
   List listArr = [
     {
       "image": "/img/mu1.png",
-      "title": "Night Island",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Ilha da Noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu2.png",
-      "title": "Sweet Sleep",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Doce sono",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu3.png",
-      "title": "Good Night",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Boa noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu4.png",
-      "title": "Moon Clouds",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Nuvens lunares",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu2.png",
-      "title": "Night Island",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Ilha da Noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu1.png",
-      "title": "Sweet Sleep",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Doce sono",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu4.png",
-      "title": "Good Night",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Boa noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu3.png",
-      "title": "Moon Clouds",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Nuvens lunares",
+      "subtitle": "45 MIN . Musica para dormir"
     },
   ];
 
@@ -86,7 +86,7 @@ class _SleepScreenState extends State<SleepScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Sleep Stories",
+                          "Histórias para dormir",
                           maxLines: 1,
                           style: TextStyle(
                               color: TColor.sleepText,
@@ -101,7 +101,7 @@ class _SleepScreenState extends State<SleepScreen> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        "Soothing bedtime stories to help you fall\ninto a deep and natural sleep",
+                        "Histórias calmas para dormir, para ajudar você a cair\nem um sono profundo e natural",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: TColor.sleepText,
@@ -201,7 +201,7 @@ class _SleepScreenState extends State<SleepScreen> {
                                         height: 8,
                                       ),
                                       Text(
-                                        "Non-stop 8- hour mixes of our\nmost popular sleep audio",
+                                        "Musicas ininterruptas de 8 horas do nossos\náudios para dormir mais popular",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           color: TColor.tertiary,

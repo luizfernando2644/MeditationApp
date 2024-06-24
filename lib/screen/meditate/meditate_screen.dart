@@ -15,26 +15,26 @@ class MeditateScreen extends StatefulWidget {
 class _MeditateScreenState extends State<MeditateScreen> {
   int selectIndex = 0;
   List catArr = [
-    {"icon": "/img/all.png", "title": "All"},
-    {"icon": "/img/fav_m.png", "title": "My"},
-    {"icon": "/img/anxious.png", "title": "Anxious"},
-    {"icon": "/img/sleep_btn.png", "title": "Sleep"},
-    {"icon": "/img/kids.png", "title": "Kids"},
+    {"icon": "/img/all.png", "title": "Todos"},
+    {"icon": "/img/fav_m.png", "title": "Meu"},
+    {"icon": "/img/anxious.png", "title": "Ansiosa(o)"},
+    {"icon": "/img/sleep_btn.png", "title": "Dormir"},
+    {"icon": "/img/kids.png", "title": "Crianças"},
   ];
 
   List dataArr = [
     {
       "image": "/img/m1.png",
-      "title": "7 Days of Calm",
+      "title": "7 Dias de calma",
     },
     {
       "image": "/img/m2.png",
-      "title": "Anxiet Release",
+      "title": "Liberação da ansiedade",
     },
-    {"image": "/img/m4.png", "title": "Reduce Anxiety"},
+    {"image": "/img/m4.png", "title": "Reduza a ansiedade"},
     {
       "image": "/img/m3.png",
-      "title": "Happiness",
+      "title": "Felicidade",
     }
   ];
 
@@ -52,7 +52,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Meditate",
+                        "Meditar",
                         style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 28,
@@ -63,7 +63,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                         height: 15,
                       ),
                       Text(
-                        "we can learn how to recognize when our minds are doing their normal everyday acrobatics.",
+                        "podemos aprender como reconhecer quando nossas mentes estão fazendo suas acrobacias diárias normais.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: TColor.secondaryText,
@@ -150,7 +150,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Daily Thought",
+                                "Pensamento Diário",
                                 style: TextStyle(
                                   color: TColor.primaryText,
                                   fontSize: 18,
@@ -161,7 +161,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                                 height: 8,
                               ),
                               Text(
-                                "APP 30 . PAUSE PRACTICE",
+                                "APP 30 . PAUSE",
                                 style: TextStyle(
                                   color: TColor.primaryText,
                                   fontSize: 11,

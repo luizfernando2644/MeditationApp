@@ -33,7 +33,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
           ),
           const Spacer(),
           Text(
-            "We are what we do",
+            "Nós somos o que nós fazemos",
             style: TextStyle(
               color: TColor.primaryText,
               fontSize: 30,
@@ -44,7 +44,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
             height: 15,
           ),
           Text(
-            "Thousand of people are using silent moon\nfor smalls meditation",
+            "Milhares de pessoas estão usando o app\npara meditação",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: TColor.secondaryText,
@@ -53,7 +53,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
           ),
           const Spacer(),
           RoundButton(
-              title: "SIGN UP",
+              title: "SIGN-UP",
               onPressed: () {
                 context.push(const SignUpScreen());
               }),
@@ -61,7 +61,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "ALREADY HAVE AN ACCOUNT?",
+                "JÁ TEM UMA CONTA?",
                 style: TextStyle(
                   color: TColor.secondaryText,
                   fontSize: 14,
@@ -73,7 +73,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
                   context.push(const LoginScreen());
                 },
                 child: Text(
-                  "LOG IN",
+                  "LOG-IN",
                   style: TextStyle(
                     color: TColor.primary,
                     fontSize: 14,

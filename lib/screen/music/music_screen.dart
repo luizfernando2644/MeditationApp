@@ -12,43 +12,43 @@ class _MusicScreenState extends State<MusicScreen> {
   List listArr = [
     {
       "image": "/img/mu1.png",
-      "title": "Night Island",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Ilha da Noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu2.png",
-      "title": "Sweet Sleep",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Doce sono",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu3.png",
-      "title": "Good Night",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Boa noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu4.png",
-      "title": "Moon Clouds",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Nuvens lunares",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu2.png",
-      "title": "Night Island",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Ilha da Noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu1.png",
-      "title": "Sweet Sleep",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Doce sono",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu4.png",
-      "title": "Good Night",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Boa noite",
+      "subtitle": "45 MIN . Musica para dormir"
     },
     {
       "image": "/img/mu3.png",
-      "title": "Moon Clouds",
-      "subtitle": "45 MIN . SLEEP MUSIC"
+      "title": "Nuvens lunares",
+      "subtitle": "45 MIN . Musica para dormir"
     },
   ];
 

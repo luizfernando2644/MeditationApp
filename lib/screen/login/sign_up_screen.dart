@@ -55,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 25,
                       ),
                       Text(
-                        "Create your account",
+                        "Crie sua conta",
                         style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 28,
@@ -88,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               const Expanded(
                                 child: Text(
-                                  "CONTINUE WITH FACEBOOK",
+                                  "Login Com o Facebook",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.white,
@@ -131,7 +131,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               Expanded(
                                 child: Text(
-                                  "CONTINUE WITH GOOGLE",
+                                  "Login com o Google",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: TColor.primaryText,
@@ -155,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 35,
               ),
               Text(
-                "OR LOG IN WITH EMAIL",
+                "FAÇA LOGIN COM  o EMAIL",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: TColor.secondaryText,
@@ -169,12 +169,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(
                 height: 20,
               ),
-              RoundTextField(hintText: "Email address"),
+              RoundTextField(hintText: "Endereço de Email"),
               const SizedBox(
                 height: 20,
               ),
               RoundTextField(
-                hintText: "Password",
+                hintText: "Senha",
                 obscureText: true,
               ),
               const SizedBox(
@@ -185,13 +185,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Row(
                   children: [
                     Text(
-                      "i have read the ",
+                      "eu li o ",
                       textAlign: TextAlign.center,
                       style:
                           TextStyle(color: TColor.secondaryText, fontSize: 14),
                     ),
                     Text(
-                      "Privacy Policy",
+                      "Politica de privacidades",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: TColor.primary,
@@ -220,7 +220,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 8,
               ),
               RoundButton(
-                  title: "GET STARTED",
+                  title: "INICIAR",
                   onPressed: () {
                     context.push(const WelcomeScreen());
                   }),

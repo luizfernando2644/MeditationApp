@@ -13,23 +13,23 @@ class _HomeScreenState extends State<HomeScreen> {
   List rArr = [
     {
       "image": "/img/r1.png",
-      "title": "Focus",
-      "subtitle": "MEDITATION . 3-10 MIN",
+      "title": "Foco",
+      "subtitle": "MEDITAÇÃO . 3-10 MIN",
     },
     {
       "image": "/img/r2.png",
-      "title": "Happiness",
-      "subtitle": "MEDITATION . 3-10 MIN",
+      "title": "Felicidade",
+      "subtitle": "MEDITAÇÃO . 3-10 MIN",
     },
     {
       "image": "/img/r1.png",
-      "title": "Focus",
-      "subtitle": "MEDITATION . 3-10 MIN",
+      "title": "Foco",
+      "subtitle": "MEDITAÇÃO . 3-10 MIN",
     },
     {
       "image": "/img/r2.png",
-      "title": "Happiness",
-      "subtitle": "MEDITATION . 3-10 MIN",
+      "title": "Felicidade",
+      "subtitle": "MEDITAÇÃO . 3-10 MIN",
     },
   ];
 
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Good Morning, Afsar",
+                      "Bom dia!",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 24,
@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 8,
                     ),
                     Text(
-                      "We Wish you have a good day",
+                      "Desejamos que você tenha um bom dia",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 20,
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           height: 8,
                                         ),
                                         Text(
-                                          "COURSE",
+                                          "CURSO",
                                           style: TextStyle(
                                             color: TColor.tertiary,
                                             fontSize: 11,
@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         vertical: 8,
                                                         horizontal: 15),
                                                 child: Text(
-                                                  "START",
+                                                  "INICIAR",
                                                   style: TextStyle(
                                                     color: TColor.primaryText,
                                                     fontSize: 12,
@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Relaxation",
+                                          "Relaxamento",
                                           style: TextStyle(
                                             color: TColor.primaryText,
                                             fontSize: 18,
@@ -227,7 +227,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           height: 8,
                                         ),
                                         Text(
-                                          "MUSIC",
+                                          "MUSiCA",
                                           style: TextStyle(
                                             color: TColor.primaryText,
                                             fontSize: 11,
@@ -262,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         vertical: 8,
                                                         horizontal: 15),
                                                 child: Text(
-                                                  "START",
+                                                  "Iniciar",
                                                   style: TextStyle(
                                                     color: TColor.tertiary,
                                                     fontSize: 12,
@@ -315,7 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Daily Thought",
+                                        "Pensamento Diário",
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,
@@ -326,7 +326,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         height: 8,
                                       ),
                                       Text(
-                                        "MEDITATION . 3-10 MIN",
+                                        "MEDITAÇÃO . 3-10 MIN",
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 11,
@@ -353,7 +353,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 35,
                     ),
                     Text(
-                      "Recommended for you",
+                      "Recomendado para você",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 24,
