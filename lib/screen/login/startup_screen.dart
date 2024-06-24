@@ -53,7 +53,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
           ),
           const Spacer(),
           RoundButton(
-              title: "SIGNUP",
+              title: "Cadastro",
               onPressed: () {
                 context.push(const SignUpScreen());
               }),
@@ -73,7 +73,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
                   context.push(const LoginScreen());
                 },
                 child: Text(
-                  "LOGIN",
+                  "Login",
                   style: TextStyle(
                     color: TColor.primary,
                     fontSize: 14,
