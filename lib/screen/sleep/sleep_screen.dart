@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/screen/sleep/sleep_stories_detail_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/screen/sleep/sleep_stories_detail_screen.dart';
 
 class SleepScreen extends StatefulWidget {
   const SleepScreen({super.key});
@@ -12,51 +12,51 @@ class SleepScreen extends StatefulWidget {
 class _SleepScreenState extends State<SleepScreen> {
   int selectIndex = 0;
   List catArr = [
-    {"icon": "assets/img/all.png", "title": "All"},
-    {"icon": "assets/img/fav_m.png", "title": "My"},
-    {"icon": "assets/img/anxious.png", "title": "Anxious"},
-    {"icon": "assets/img/sleep_btn.png", "title": "Sleep"},
-    {"icon": "assets/img/kids.png", "title": "Kids"},
+    {"icon": "/img/all.png", "title": "All"},
+    {"icon": "/img/fav_m.png", "title": "My"},
+    {"icon": "/img/anxious.png", "title": "Anxious"},
+    {"icon": "/img/sleep_btn.png", "title": "Sleep"},
+    {"icon": "/img/kids.png", "title": "Kids"},
   ];
 
   List listArr = [
     {
-      "image": "assets/img/mu1.png",
+      "image": "/img/mu1.png",
       "title": "Night Island",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu2.png",
+      "image": "/img/mu2.png",
       "title": "Sweet Sleep",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu3.png",
+      "image": "/img/mu3.png",
       "title": "Good Night",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu4.png",
+      "image": "/img/mu4.png",
       "title": "Moon Clouds",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu2.png",
+      "image": "/img/mu2.png",
       "title": "Night Island",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu1.png",
+      "image": "/img/mu1.png",
       "title": "Sweet Sleep",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu4.png",
+      "image": "/img/mu4.png",
       "title": "Good Night",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu3.png",
+      "image": "/img/mu3.png",
       "title": "Moon Clouds",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
@@ -73,7 +73,7 @@ class _SleepScreenState extends State<SleepScreen> {
               alignment: Alignment.topCenter,
               children: [
                 Image.asset(
-                  "assets/img/top_sleep.png",
+                  "/img/top_sleep.png",
                   width: double.maxFinite,
                   fit: BoxFit.fitWidth,
                 ),
@@ -171,7 +171,7 @@ class _SleepScreenState extends State<SleepScreen> {
                         alignment: Alignment.center,
                         children: [
                           Image.asset(
-                            "assets/img/sleep_box.png",
+                            "/img/sleep_box.png",
                             width: double.maxFinite,
                             fit: BoxFit.fitWidth,
                           ),

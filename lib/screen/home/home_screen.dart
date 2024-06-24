@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/screen/home/course_detail_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/screen/home/course_detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,22 +12,22 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List rArr = [
     {
-      "image": "assets/img/r1.png",
+      "image": "/img/r1.png",
       "title": "Focus",
       "subtitle": "MEDITATION . 3-10 MIN",
     },
     {
-      "image": "assets/img/r2.png",
+      "image": "/img/r2.png",
       "title": "Happiness",
       "subtitle": "MEDITATION . 3-10 MIN",
     },
     {
-      "image": "assets/img/r1.png",
+      "image": "/img/r1.png",
       "title": "Focus",
       "subtitle": "MEDITATION . 3-10 MIN",
     },
     {
-      "image": "assets/img/r2.png",
+      "image": "/img/r2.png",
       "title": "Happiness",
       "subtitle": "MEDITATION . 3-10 MIN",
     },
@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    "assets/img/logo_black.png",
+                    "/img/logo_black.png",
                     width: context.width * 0.5,
                   )
                 ],
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Bom dia",
+                      "Good Morning, Afsar",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 24,
@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 8,
                     ),
                     Text(
-                      "´Tenha um ótimo dia",
+                      "We Wish you have a good day",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 20,
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Image.asset(
-                                        "assets/img/h1.png",
+                                        "/img/h1.png",
                                         width: 80,
                                         height: 80,
                                       ),
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Básico",
+                                          "Basics",
                                           style: TextStyle(
                                             color: TColor.tertiary,
                                             fontSize: 18,
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           height: 8,
                                         ),
                                         Text(
-                                          "CURSO",
+                                          "COURSE",
                                           style: TextStyle(
                                             color: TColor.tertiary,
                                             fontSize: 11,
@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         vertical: 8,
                                                         horizontal: 15),
                                                 child: Text(
-                                                  "COMEÇAR",
+                                                  "START",
                                                   style: TextStyle(
                                                     color: TColor.primaryText,
                                                     fontSize: 12,
@@ -202,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Image.asset(
-                                        "assets/img/h2.png",
+                                        "/img/h2.png",
                                         width: 80,
                                         height: 80,
                                       ),
@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Relaxamento",
+                                          "Relaxation",
                                           style: TextStyle(
                                             color: TColor.primaryText,
                                             fontSize: 18,
@@ -227,7 +227,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           height: 8,
                                         ),
                                         Text(
-                                          "MÚSICA",
+                                          "MUSIC",
                                           style: TextStyle(
                                             color: TColor.primaryText,
                                             fontSize: 11,
@@ -262,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         vertical: 8,
                                                         horizontal: 15),
                                                 child: Text(
-                                                  "COMEÇAR",
+                                                  "START",
                                                   style: TextStyle(
                                                     color: TColor.tertiary,
                                                     fontSize: 12,
@@ -299,7 +299,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         alignment: Alignment.center,
                         children: [
                           Image.asset(
-                            "assets/img/d1.png",
+                            "/img/d1.png",
                             width: double.maxFinite,
                             fit: BoxFit.fitWidth,
                           ),
@@ -315,7 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Pensamento Diário",
+                                        "Daily Thought",
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,
@@ -326,7 +326,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         height: 8,
                                       ),
                                       Text(
-                                        "MEDITAÇÃO . 3-10 MIN",
+                                        "MEDITATION . 3-10 MIN",
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 11,
@@ -338,7 +338,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 InkWell(
                                   onTap: () {},
                                   child: Image.asset(
-                                    "assets/img/play.png",
+                                    "/img/play.png",
                                     width: 40,
                                     height: 40,
                                   ),
@@ -353,7 +353,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 35,
                     ),
                     Text(
-                      "Recomendado para você.",
+                      "Recommended for you",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 24,

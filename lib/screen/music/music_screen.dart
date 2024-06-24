@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
+import 'package:meditation_app/common/color_extension.dart';
 
 class MusicScreen extends StatefulWidget {
   const MusicScreen({super.key});
@@ -11,42 +11,42 @@ class MusicScreen extends StatefulWidget {
 class _MusicScreenState extends State<MusicScreen> {
   List listArr = [
     {
-      "image": "assets/img/mu1.png",
+      "image": "/img/mu1.png",
       "title": "Night Island",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu2.png",
+      "image": "/img/mu2.png",
       "title": "Sweet Sleep",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu3.png",
+      "image": "/img/mu3.png",
       "title": "Good Night",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu4.png",
+      "image": "/img/mu4.png",
       "title": "Moon Clouds",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu2.png",
+      "image": "/img/mu2.png",
       "title": "Night Island",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu1.png",
+      "image": "/img/mu1.png",
       "title": "Sweet Sleep",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu4.png",
+      "image": "/img/mu4.png",
       "title": "Good Night",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },
     {
-      "image": "assets/img/mu3.png",
+      "image": "/img/mu3.png",
       "title": "Moon Clouds",
       "subtitle": "45 MIN . SLEEP MUSIC"
     },

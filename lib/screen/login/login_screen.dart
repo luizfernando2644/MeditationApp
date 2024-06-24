@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/round_button.dart';
-import 'package:meditation/common_widget/round_text_field.dart';
-import 'package:meditation/screen/home/choose_topic_screen.dart';
-import 'package:meditation/screen/home/welcome_screen.dart';
-import 'package:meditation/screen/login/sign_up_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/round_button.dart';
+import 'package:meditation_app/common_widget/round_text_field.dart';
+import 'package:meditation_app/screen/home/welcome_screen.dart';
+import 'package:meditation_app/screen/login/sign_up_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,10 +14,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-  
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 alignment: Alignment.bottomCenter,
                 children: [
                   Image.asset(
-                    "assets/img/login_top.png",
+                    "/img/login_top.png",
                     width: double.maxFinite,
                     fit: BoxFit.fitWidth,
                   ),
@@ -47,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 context.pop();
                               },
                               child: Image.asset(
-                                "assets/img/back.png",
+                                "/img/back.png",
                                 width: 55,
                                 height: 55,
                               ),
@@ -86,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 width: 15,
                               ),
                               Image.asset(
-                                'assets/img/fb.png',
+                                '/img/fb.png',
                                 width: 25,
                                 height: 25,
                               ),
@@ -129,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 width: 15,
                               ),
                               Image.asset(
-                                'assets/img/google.png',
+                                '/img/google.png',
                                 width: 25,
                                 height: 25,
                               ),
@@ -174,20 +169,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               RoundTextField(
-                hintText: "Password",
+                hintText: "Senha",
                 obscureText: true,
               ),
               const SizedBox(
                 height: 20,
               ),
-              RoundButton(title: "LOG IN", onPressed: () {
-                context.push( const WelcomeScreen());
-                
-              }),
+              RoundButton(
+                  title: "LOG IN",
+                  onPressed: () {
+                    context.push(const WelcomeScreen());
+                  }),
               TextButton(
-                onPressed: () {
-                  
-                },
+                onPressed: () {},
                 child: Text(
                   "Forgot Password?",
                   style: TextStyle(
@@ -197,7 +191,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-
               const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/round_button.dart';
-import 'package:meditation/screen/home/reminders_screen.dart';
-import 'package:meditation/screen/home/welcome_screen.dart';
-import 'package:meditation/screen/login/login_screen.dart';
-import 'package:meditation/screen/login/sign_up_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/round_button.dart';
+import 'package:meditation_app/screen/login/login_screen.dart';
+import 'package:meditation_app/screen/login/sign_up_screen.dart';
 
 class StartUpScreen extends StatefulWidget {
   const StartUpScreen({super.key});
@@ -29,7 +27,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            "assets/img/starup_top.png",
+            "/img/starup_top.png",
             width: double.maxFinite,
             fit: BoxFit.fitWidth,
           ),

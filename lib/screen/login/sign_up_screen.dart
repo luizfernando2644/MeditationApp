@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/round_button.dart';
-import 'package:meditation/common_widget/round_text_field.dart';
-import 'package:meditation/screen/home/choose_topic_screen.dart';
-import 'package:meditation/screen/home/welcome_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/round_button.dart';
+import 'package:meditation_app/common_widget/round_text_field.dart';
+import 'package:meditation_app/screen/home/welcome_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -29,7 +28,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 alignment: Alignment.bottomCenter,
                 children: [
                   Image.asset(
-                    "assets/img/login_top.png",
+                    "/img/login_top.png",
                     width: double.maxFinite,
                     fit: BoxFit.fitWidth,
                   ),
@@ -44,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 context.pop();
                               },
                               child: Image.asset(
-                                "assets/img/back.png",
+                                "/img/back.png",
                                 width: 55,
                                 height: 55,
                               ),
@@ -83,7 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 15,
                               ),
                               Image.asset(
-                                'assets/img/fb.png',
+                                '/img/fb.png',
                                 width: 25,
                                 height: 25,
                               ),
@@ -126,7 +125,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 15,
                               ),
                               Image.asset(
-                                'assets/img/google.png',
+                                '/img/google.png',
                                 width: 25,
                                 height: 25,
                               ),
@@ -220,9 +219,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(
                 height: 8,
               ),
-              RoundButton(title: "GET STARTED", onPressed: () {
-                 context.push(const WelcomeScreen());
-              }),
+              RoundButton(
+                  title: "GET STARTED",
+                  onPressed: () {
+                    context.push(const WelcomeScreen());
+                  }),
               const Spacer(),
             ],
           ),

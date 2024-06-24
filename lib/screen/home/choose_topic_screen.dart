@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/screen/home/reminders_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/screen/home/reminders_screen.dart';
 
 class ChooseTopicScreen extends StatefulWidget {
   const ChooseTopicScreen({super.key});
@@ -13,73 +13,73 @@ class ChooseTopicScreen extends StatefulWidget {
 class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
   List dataArr = [
     {
-      "image": "assets/img/c1.png",
+      "image": "/img/c1.png",
       "title": "Reduce Stress",
       "color": "8E97FD",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c2.png",
+      "image": "/img/c2.png",
       "title": "Improve Performanee",
       "color": "FA6E5A",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c3.png",
+      "image": "/img/c3.png",
       "title": "Reduce Anxiety",
       "color": "FEB18F",
       "text_color": "3F414E",
     },
     {
-      "image": "assets/img/c4.png",
+      "image": "/img/c4.png",
       "title": "Increase Happiness",
       "color": "FFCF86",
       "text_color": "3F414E",
     },
     {
-      "image": "assets/img/c5.png",
+      "image": "/img/c5.png",
       "title": "Personal Growth",
       "color": "6CB28E",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c6.png",
+      "image": "/img/c6.png",
       "title": "Better Sleep",
       "color": "3F414E",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c1.png",
+      "image": "/img/c1.png",
       "title": "Reduce Stress",
       "color": "8E97FD",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c2.png",
+      "image": "/img/c2.png",
       "title": "Improve Performanee",
       "color": "FA6E5A",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c3.png",
+      "image": "/img/c3.png",
       "title": "Reduce Anxiety",
       "color": "FEB18F",
       "text_color": "3F414E",
     },
     {
-      "image": "assets/img/c4.png",
+      "image": "/img/c4.png",
       "title": "Increase Happiness",
       "color": "FFCF86",
       "text_color": "3F414E",
     },
     {
-      "image": "assets/img/c5.png",
+      "image": "/img/c5.png",
       "title": "Personal Growth",
       "color": "6CB28E",
       "text_color": "FFECCC",
     },
     {
-      "image": "assets/img/c6.png",
+      "image": "/img/c6.png",
       "title": "Better Sleep",
       "color": "3F414E",
       "text_color": "FFECCC",
@@ -113,7 +113,7 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
                       ],
                     ),
                     Text(
-                      "para Silent Moon?",
+                      "to Silent Moon?",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 28,
@@ -123,7 +123,7 @@ class _ChooseTopicScreenState extends State<ChooseTopicScreen> {
                       height: 15,
                     ),
                     Text(
-                      "escolha um tópico para focar:",
+                      "choose a topic to focuse on:",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 20,

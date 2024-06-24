@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/select_tab_button.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/select_tab_button.dart';
 
 class CourseDetailScreen extends StatefulWidget {
   const CourseDetailScreen({super.key});
@@ -27,7 +27,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                     context.pop();
                   },
                   child: Image.asset(
-                    "assets/img/back_white.png",
+                    "/img/back_white.png",
                     width: 55,
                     height: 55,
                   ),
@@ -38,7 +38,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                 InkWell(
                   onTap: () {},
                   child: Image.asset(
-                    "assets/img/fav_button.png",
+                    "/img/fav_button.png",
                     width: 45,
                     height: 45,
                   ),
@@ -51,7 +51,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                   child: InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/img/download_button.png",
+                      "/img/download_button.png",
                       width: 45,
                       height: 45,
                     ),
@@ -64,7 +64,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       bottomLeft: Radius.circular(15),
                       bottomRight: Radius.circular(15)),
                   child: Image.asset(
-                    "assets/img/detail_top.png",
+                    "/img/detail_top.png",
                     width: context.width,
                     fit: BoxFit.cover,
                   ),
@@ -94,7 +94,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       height: 8,
                     ),
                     Text(
-                      "CURSO",
+                      "COURSE",
                       style: TextStyle(
                           color: TColor.secondaryText,
                           fontSize: 14,
@@ -104,7 +104,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       height: 15,
                     ),
                     Text(
-                      "Tranquilize a mente para uma noite de sono tranquila com esses tons profundos e suaves.",
+                      "Ease the mind into a restful night’s sleep  with these deep, amblent tones.",
                       style: TextStyle(
                         color: TColor.secondaryText,
                         fontSize: 16,
@@ -116,7 +116,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                     Row(
                       children: [
                         Image.asset(
-                          "assets/img/fav.png",
+                          "/img/fav.png",
                           width: 20,
                           height: 20,
                         ),
@@ -125,7 +125,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "24.234 Favoritos",
+                            "24.234 Favorits",
                             style: TextStyle(
                                 color: TColor.secondaryText,
                                 fontSize: 14,
@@ -133,7 +133,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                           ),
                         ),
                         Image.asset(
-                          "assets/img/headphone.png",
+                          "/img/headphone.png",
                           width: 20,
                           height: 20,
                         ),
@@ -142,7 +142,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         ),
                         Expanded(
                           child: Text(
-                            "34.234 Escutados",
+                            "34.234 Lestening",
                             style: TextStyle(
                                 color: TColor.secondaryText,
                                 fontSize: 14,
@@ -155,7 +155,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       height: 25,
                     ),
                     Text(
-                      "Escolha um Narrador",
+                      "Pick a Narrator",
                       style: TextStyle(
                           color: TColor.primaryText,
                           fontSize: 20,
@@ -167,7 +167,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               Row(
                 children: [
                   SelectTabButton(
-                      title: "VOZ MASCULINA",
+                      title: "MALE VOICE",
                       isSelect: selectTab == 0,
                       onPressed: () {
                         setState(() {
@@ -175,7 +175,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         });
                       }),
                   SelectTabButton(
-                      title: "VOZ FEMININA",
+                      title: "FEMALE VOICE",
                       isSelect: selectTab == 1,
                       onPressed: () {
                         setState(() {
@@ -199,27 +199,30 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                       children: [
                         Image.asset(
                           index == 0
-                              ? "assets/img/play_color.png"
-                              : "assets/img/play_border.png",
+                              ? "/img/play_color.png"
+                              : "/img/play_border.png",
                           width: 40,
                           height: 40,
                         ),
-                        const SizedBox(width: 15,),
+                        const SizedBox(
+                          width: 15,
+                        ),
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Se concentre",
+                              "Focue Attention",
                               style: TextStyle(
                                 color: TColor.primaryText,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-
-                            const SizedBox(height: 4,),
-                             Text(
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            Text(
                               "10 MIN",
                               style: TextStyle(
                                 color: TColor.secondaryText,

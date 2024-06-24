@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/round_button.dart';
-import 'package:meditation/screen/home/choose_topic_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/round_button.dart';
+import 'package:meditation_app/screen/home/choose_topic_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -19,7 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         alignment: Alignment.bottomCenter,
         children: [
           Image.asset(
-            "assets/img/welcome.png",
+            "/img/welcome.png",
             width: context.width,
             fit: BoxFit.fitWidth,
           ),
@@ -32,14 +32,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: 15,
                   ),
                   Image.asset(
-                    "assets/img/logo.png",
+                    "/img/logo.png",
                     width: context.width * 0.5,
                   ),
                   const SizedBox(
                     height: 50,
                   ),
                   Text(
-                    "Olá, Seja Bem-Vindo",
+                    "Olá.",
                     style: TextStyle(
                       color: TColor.primaryTextW,
                       fontSize: 30,
@@ -50,7 +50,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: 8,
                   ),
                   Text(
-                    "Para o silent moon",
+                    "Seja bem vindo!",
                     style: TextStyle(
                       color: TColor.primaryTextW,
                       fontSize: 30,
@@ -60,7 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: 25,
                   ),
                   Text(
-                    "Explore o aplicativo, Se prepare para a meditação.",
+                    "Explore o aplicativo, encontre um pouco de paz de espírito para se preparar para a meditação.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: TColor.primaryTextW,
@@ -69,7 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                   const Spacer(),
                   RoundButton(
-                      title: "COMEÇAR",
+                      title: "Começar",
                       type: RoundButtonType.secondary,
                       onPressed: () {
                         context.push(const ChooseTopicScreen());

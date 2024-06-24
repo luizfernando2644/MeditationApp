@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/circle_button.dart';
-import 'package:meditation/common_widget/round_button.dart';
-import 'package:meditation/screen/home/home_screen.dart';
-import 'package:meditation/screen/main_tabview/main_tabview_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/circle_button.dart';
+import 'package:meditation_app/common_widget/round_button.dart';
+import 'package:meditation_app/screen/main_tabview/main_tabview_screen.dart';
 
 class RemindersScreen extends StatefulWidget {
   const RemindersScreen({super.key});
@@ -43,7 +42,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 15,
                   ),
                   Text(
-                    "Qual horário você gostaria de meditar?",
+                    "What time would you\nlike to meditate?",
                     style: TextStyle(
                       color: TColor.primaryText,
                       fontSize: 24,
@@ -54,7 +53,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 15,
                   ),
                   Text(
-                    "Você pode escolher qualquer horário mas nós recomendamos\nser a primeira coisa a ser feita na manhã.",
+                    "Any time you can choose but We recommend\nfirst thing in th morning.",
                     style: TextStyle(
                       color: TColor.secondaryText,
                       fontSize: 16,
@@ -79,7 +78,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 35,
                   ),
                   Text(
-                    "Quantos dias\ngostaria de meditar?",
+                    "What day would you\nlike to meditate?",
                     style: TextStyle(
                       color: TColor.primaryText,
                       fontSize: 24,
@@ -90,7 +89,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                     height: 15,
                   ),
                   Text(
-                    "Todos os dias são bons mas recomendadods\npelo menos cinco.",
+                    "Everyday is best, but we recommend picking\nat least five.",
                     style: TextStyle(
                       color: TColor.secondaryText,
                       fontSize: 16,
@@ -116,9 +115,11 @@ class _RemindersScreenState extends State<RemindersScreen> {
                 ],
               ),
             ),
-            RoundButton(title: "Salvar", onPressed: () {
-              context.push(const MainTabViewScreen());
-            }),
+            RoundButton(
+                title: "SAVE",
+                onPressed: () {
+                  context.push(const MainTabViewScreen());
+                }),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -127,7 +128,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                       context.push(const MainTabViewScreen());
                     },
                     child: Text(
-                      "Não Obrigada",
+                      "NO THANKS",
                       style: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 14,

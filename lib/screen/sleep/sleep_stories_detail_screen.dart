@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/common_widget/round_button.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/common_widget/round_button.dart';
 
 class SleepStoriesDetailScreen extends StatefulWidget {
   const SleepStoriesDetailScreen({super.key});
@@ -13,12 +13,12 @@ class SleepStoriesDetailScreen extends StatefulWidget {
 class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
   List listArr = [
     {
-      "image": "assets/img/mu3.png",
+      "image": "/img/mu3.png",
       "title": "Moon Clouds",
       "subtitle": "45 MIN . SLEEP MUSIC",
     },
     {
-      "image": "assets/img/mu2.png",
+      "image": "/img/mu2.png",
       "title": "Sweet Sleep",
       "subtitle": "45 MIN . SLEEP MUSIC",
     }
@@ -41,7 +41,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                     context.pop();
                   },
                   child: Image.asset(
-                    "assets/img/back_white.png",
+                    "/img/back_white.png",
                     width: 55,
                     height: 55,
                   ),
@@ -51,7 +51,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                 InkWell(
                   onTap: () {},
                   child: Image.asset(
-                    "assets/img/fav_button.png",
+                    "/img/fav_button.png",
                     width: 45,
                     height: 45,
                   ),
@@ -64,7 +64,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                   child: InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/img/download_button.png",
+                      "/img/download_button.png",
                       width: 45,
                       height: 45,
                     ),
@@ -77,7 +77,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                     bottomLeft: Radius.circular(15),
                     bottomRight: Radius.circular(15)),
                 child: Image.asset(
-                  "assets/img/sleep_detail_top.png",
+                  "/img/sleep_detail_top.png",
                   width: context.width,
                   fit: BoxFit.cover,
                 ),
@@ -132,7 +132,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                     Row(
                       children: [
                         Image.asset(
-                          "assets/img/fav.png",
+                          "/img/fav.png",
                           width: 20,
                           height: 20,
                           color: TColor.sleepText,
@@ -150,7 +150,7 @@ class _SleepStoriesDetailScreenState extends State<SleepStoriesDetailScreen> {
                           ),
                         ),
                         Image.asset(
-                          "assets/img/headphone.png",
+                          "/img/headphone.png",
                           width: 20,
                           height: 20,
                           color: TColor.sleepText,

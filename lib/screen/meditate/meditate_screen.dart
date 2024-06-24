@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:meditation/common/color_extension.dart';
-import 'package:meditation/screen/home/reminders_screen.dart';
+import 'package:meditation_app/common/color_extension.dart';
+import 'package:meditation_app/screen/home/reminders_screen.dart';
 
 class MeditateScreen extends StatefulWidget {
   const MeditateScreen({super.key});
@@ -15,25 +15,25 @@ class MeditateScreen extends StatefulWidget {
 class _MeditateScreenState extends State<MeditateScreen> {
   int selectIndex = 0;
   List catArr = [
-    {"icon": "assets/img/all.png", "title": "All"},
-    {"icon": "assets/img/fav_m.png", "title": "My"},
-    {"icon": "assets/img/anxious.png", "title": "Anxious"},
-    {"icon": "assets/img/sleep_btn.png", "title": "Sleep"},
-    {"icon": "assets/img/kids.png", "title": "Kids"},
+    {"icon": "/img/all.png", "title": "All"},
+    {"icon": "/img/fav_m.png", "title": "My"},
+    {"icon": "/img/anxious.png", "title": "Anxious"},
+    {"icon": "/img/sleep_btn.png", "title": "Sleep"},
+    {"icon": "/img/kids.png", "title": "Kids"},
   ];
 
   List dataArr = [
     {
-      "image": "assets/img/m1.png",
+      "image": "/img/m1.png",
       "title": "7 Days of Calm",
     },
     {
-      "image": "assets/img/m2.png",
+      "image": "/img/m2.png",
       "title": "Anxiet Release",
     },
-    {"image": "assets/img/m4.png", "title": "Reduce Anxiety"},
+    {"image": "/img/m4.png", "title": "Reduce Anxiety"},
     {
-      "image": "assets/img/m3.png",
+      "image": "/img/m3.png",
       "title": "Happiness",
     }
   ];
@@ -52,13 +52,13 @@ class _MeditateScreenState extends State<MeditateScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                              "Meditate",
-                              style: TextStyle(
-                                color: TColor.primaryText,
-                                fontSize: 28,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
+                        "Meditate",
+                        style: TextStyle(
+                          color: TColor.primaryText,
+                          fontSize: 28,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                       const SizedBox(
                         height: 15,
                       ),
@@ -76,30 +76,31 @@ class _MeditateScreenState extends State<MeditateScreen> {
             SizedBox(
               height: 120,
               child: ListView.separated(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                scrollDirection: Axis.horizontal,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     var cObj = catArr[index];
                     return InkWell(
                       onTap: () {
                         selectIndex = index;
-                         setState(() {});
+                        setState(() {});
                       },
                       child: Column(children: [
                         Container(
                           width: 55,
                           height: 55,
                           decoration: BoxDecoration(
-                              color: selectIndex ==                                   index
+                              color: selectIndex == index
                                   ? TColor.primary
                                   : const Color(0xffA0A3B1),
                               borderRadius: BorderRadius.circular(20)),
                           alignment: Alignment.center,
                           child: Image.asset(
-                           cObj["icon"]  ,
+                            cObj["icon"],
                             width: 25,
                             height: 25,
-                            color: Colors.white ,
+                            color: Colors.white,
                           ),
                         ),
                         const SizedBox(
@@ -108,7 +109,8 @@ class _MeditateScreenState extends State<MeditateScreen> {
                         Text(
                           cObj["title"],
                           style: TextStyle(
-                            color: selectIndex == index ? TColor.primary
+                            color: selectIndex == index
+                                ? TColor.primary
                                 : TColor.secondaryText,
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -120,7 +122,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                   separatorBuilder: (context, index) => const SizedBox(
                         width: 20,
                       ),
-                  itemCount: catArr.length ),
+                  itemCount: catArr.length),
             ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 15),
@@ -133,7 +135,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                 alignment: Alignment.center,
                 children: [
                   Image.asset(
-                    "assets/img/dailyCalm.png",
+                    "/img/dailyCalm.png",
                     width: double.maxFinite,
                     fit: BoxFit.fitWidth,
                   ),
@@ -171,7 +173,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                         InkWell(
                           onTap: () {},
                           child: Image.asset(
-                            "assets/img/play_black.png",
+                            "/img/play_black.png",
                             width: 40,
                             height: 40,
                           ),
@@ -256,7 +258,7 @@ class _MeditateScreenState extends State<MeditateScreen> {
                   ),
                 );
               },
-            )
+            ),
           ],
         ),
       ),
