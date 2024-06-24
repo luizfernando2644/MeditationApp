@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:meditation_app/common/color_extension.dart';
 import 'package:meditation_app/common_widget/round_button.dart';
 import 'package:meditation_app/common_widget/round_text_field.dart';
-import 'package:meditation_app/screen/home/welcome_screen.dart';
+import 'package:meditation_app/screen/login/login_screen.dart'; // Certifique-se de que o caminho para a tela de login está correto
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -31,8 +31,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
       );
       User? user = userCredential.user;
       if (user != null) {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) =>
+                const LoginScreen())); // Redireciona para a tela de login
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -130,7 +131,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // Aqui você pode adicionar uma ação para abrir a política de privacidade
+                        // Implemente uma ação para abrir a política de privacidade
                       },
                       child: Text(
                         "Política de Privacidade",
