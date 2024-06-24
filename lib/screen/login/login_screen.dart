@@ -1,5 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:meditation_app/common/color_extension.dart';
 import 'package:meditation_app/common_widget/round_button.dart';
 import 'package:meditation_app/common_widget/round_text_field.dart';
@@ -14,6 +14,27 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  static Future<User?> loginUsingEmailPassword(
+      {required String email,
+      required String password,
+      required BuildContext context}) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user;
+
+    try {
+      UserCredential userCredential = await auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      user = userCredential.user;
+    } on FirebaseException catch (e) {
+      if (e.code != "user-not-found") {
+        print("no user found with that email");
+      }
+    }
+  }
+
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,21 +185,33 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 35,
               ),
-              RoundTextField(hintText: "Endereço de Email"),
+              RoundTextField(
+                hintText: "Endereço de Email",
+                controller: _emailController,
+              ),
               const SizedBox(
                 height: 20,
               ),
               RoundTextField(
                 hintText: "Senha",
                 obscureText: true,
+                controller: _passwordController,
               ),
               const SizedBox(
                 height: 20,
               ),
               RoundButton(
                   title: "Login",
-                  onPressed: () {
-                    context.push(const WelcomeScreen());
+                  onPressed: () async {
+                    User? user = await loginUsingEmailPassword(
+                        email: _emailController.text,
+                        password: _passwordController.text,
+                        context: context);
+
+                    if (user != null) {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => const WelcomeScreen()));
+                    }
                   }),
               TextButton(
                 onPressed: () {},

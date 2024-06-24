@@ -1,8 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:meditation_app/common/color_extension.dart';
 import 'package:meditation_app/screen/login/startup_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  FirebaseApp firebaseApp = await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyBV9ruM1rhLiSkM5gP1Iz0-TKBiwfA7QH8",
+          appId: "1:1042119685082:android:07c43037e842c1b23ec6e3",
+          messagingSenderId: "1042119685082",
+          projectId: "appmeditacao-3aeb3"));
   runApp(const MyApp());
 }
 
