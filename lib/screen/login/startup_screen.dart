@@ -73,7 +73,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
                   context.push(const LoginScreen());
                 },
                 child: Text(
-                  "LOGIN",
+                  "Login",
                   style: TextStyle(
                     color: TColor.primary,
                     fontSize: 14,

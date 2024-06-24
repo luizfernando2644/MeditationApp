@@ -14,26 +14,37 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  static Future<User?> loginUsingEmailPassword(
-      {required String email,
-      required String password,
-      required BuildContext context}) async {
+  static Future<User?> loginUsingEmailPassword({
+    required String email,
+    required String password,
+    required BuildContext context,
+  }) async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
 
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
-          email: email, password: password);
+        email: email,
+        password: password,
+      );
       user = userCredential.user;
     } on FirebaseException catch (e) {
-      if (e.code != "user-not-found") {
-        print("no user found with that email");
+      if (e.code == "user-not-found") {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("Nenhum usuário encontrado com esse email.")));
+      } else if (e.code == "wrong-password") {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("Senha incorreta. Por favor, tente novamente.")));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text("Erro de autenticação: ${e.message}")));
       }
     }
+    return user;
   }
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
