@@ -176,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               RoundButton(
-                  title: "Log-in",
+                  title: "Login",
                   onPressed: () {
                     context.push(const WelcomeScreen());
                   }),

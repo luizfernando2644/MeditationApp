@@ -155,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 35,
               ),
               Text(
-                "FAÇA LOGIN COM  o EMAIL",
+                "FAÇA LOGIN COM  O EMAIL",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: TColor.secondaryText,
